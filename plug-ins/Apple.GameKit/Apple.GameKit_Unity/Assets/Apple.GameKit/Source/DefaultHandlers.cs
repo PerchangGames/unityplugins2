@@ -4,6 +4,8 @@ using AOT;
 using Apple.Core.Runtime;
 using UnityEngine;
 
+#if UNITY_EDITOR_OSX || (!UNITY_EDITOR && (UNITY_IOS || UNITY_TVOS || UNITY_STANDALONE_OSX || UNITY_VISIONOS))
+
 namespace Apple.GameKit
 {
     public static class DefaultNSExceptionHandler
@@ -48,3 +50,5 @@ namespace Apple.GameKit
         }
     }
 }
+
+#endif
