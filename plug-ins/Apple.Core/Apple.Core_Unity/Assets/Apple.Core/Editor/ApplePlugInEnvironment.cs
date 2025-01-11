@@ -103,7 +103,7 @@ namespace Apple.Core
         /// <remarks>
         /// The Apple Unity Plug-Ins infrastructure will fail if attempts to access the list of packages fails, so it may be necessary to investigate what would cause timeouts or even to extend the timeout duration.
         /// </remarks>
-        private static int _packageManagerBatchModeListRequestTimeout => 5;
+        private static int _packageManagerBatchModeListRequestTimeout => 300;
 
         /// <summary>
         /// Collection of all known Apple Unity Plug-In packages
@@ -243,6 +243,8 @@ namespace Apple.Core
 
                 if (_packageManagerListRequest.Status == StatusCode.Success)
                 {
+                    Debug.Log("[Apple Unity Plug-Ins] Package manager list request in " + (DateTime.Now - startTime));
+
                     // No need to sync play mode support libraries in batch mode. These are used just for Play Mode within the Editor.
                     OnPackageManagerListSuccess(syncPlayModeLibraries: false);
                 }
