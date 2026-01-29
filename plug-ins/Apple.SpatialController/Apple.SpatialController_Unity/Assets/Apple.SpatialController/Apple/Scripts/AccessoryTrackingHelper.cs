@@ -1,11 +1,7 @@
 using UnityEngine;
-using Unity.Mathematics;
-using System;
 using AOT;
 using System.Collections.Generic;
 using UnityEngine.Events;
-using Unity.VisualScripting;
-using UnityEngine.UI;
 using TMPro;
 
 namespace Apple.visionOS.AccessoryTracking

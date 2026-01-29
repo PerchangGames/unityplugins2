@@ -4,7 +4,6 @@
     "references": [
         "Apple.Core",
         "Unity.Mathematics",
-        "Unity.VisualScripting",
         "Unity.TextMeshPro"
     ],
     "includePlatforms": [
