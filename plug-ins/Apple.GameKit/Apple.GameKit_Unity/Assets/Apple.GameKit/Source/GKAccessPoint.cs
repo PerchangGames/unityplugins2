@@ -295,14 +295,18 @@ namespace Apple.GameKit
             [DllImport(InteropUtility.DLLName)]
             public static extern GKAccessPointFrameInScreenCoordinates GKAccessPoint_GetFrameInUnitCoordinates(IntPtr pointer);
             [DllImport(InteropUtility.DLLName)]
+            [return: MarshalAs(UnmanagedType.U1)]
             public static extern bool GKAccessPoint_GetIsActive(IntPtr pointer);
             [DllImport(InteropUtility.DLLName)]
             public static extern void GKAccessPoint_SetIsActive(IntPtr pointer, bool isActive);
             [DllImport(InteropUtility.DLLName)]
+            [return: MarshalAs(UnmanagedType.U1)]
             public static extern bool GKAccessPoint_GetIsPresentingGameCenter(IntPtr pointer);
             [DllImport(InteropUtility.DLLName)]
+            [return: MarshalAs(UnmanagedType.U1)]
             public static extern bool GKAccessPoint_GetIsVisible(IntPtr pointer);
             [DllImport(InteropUtility.DLLName)]
+            [return: MarshalAs(UnmanagedType.U1)]
             public static extern bool GKAccessPoint_GetShowHighlights(IntPtr pointer);
             [DllImport(InteropUtility.DLLName)]
             public static extern void GKAccessPoint_SetShowHighlights(IntPtr pointer, bool isActive);
